@@ -1,0 +1,16 @@
+streamlit
+pandas
+numpy>=1.26.0
+matplotlib
+seaborn
+groq
+rapidfuzz
+flask
+plotly
+python-dotenv
+jinja2
+weasyprint
+reportlab
+beautifulsoup4
+requests
+kaleido
