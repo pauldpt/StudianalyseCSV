@@ -63,7 +63,7 @@ Double-clic sur: DEMARRER_STREAMLIT.bat
 
 **Windows - Option B (PowerShell):**
 ```powershell
-$env:GROQ_API_KEY="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"
+$env:GROQ_API_KEY=""
 .\DEMARRER_STREAMLIT.ps1
 ```
 
