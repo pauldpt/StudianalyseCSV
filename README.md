@@ -1,62 +1,30 @@
-﻿# StudianalyseCSV - Analyse et Web Scraper
+# StudianalyseCSV
 
-Application web en francais pour:
-- charger et verifier des CSV,
-- nettoyer les donnees,
-- analyser automatiquement les donnees,
-- generer des graphiques et un rapport,
-- scraper des tableaux HTML depuis une URL.
+Application Python permettant l’analyse, le nettoyage et la visualisation automatisée de données CSV.
 
-## 1) Installation
+## Description
 
-Prerequis:
-- Python 3.10+
+Ce projet a été développé dans le cadre d’un travail personnel réalisé durant mon stage chez Onlineformapro.
 
-Commandes:
+L’objectif est de simplifier l’analyse de fichiers CSV pour produire rapidement des graphiques, des indicateurs et des rapports exploitables.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+## Fonctionnalités
 
-## 2) Lancer l'application web
+- Import et traitement de fichiers CSV
+- Nettoyage automatique des données
+- Harmonisation des colonnes et valeurs
+- Génération de graphiques interactifs
+- Création de rapports HTML/PDF
+- Interface utilisateur avec Streamlit
 
-```powershell
-python web_app.py
-```
+## Technologies utilisées
 
-Puis ouvrir:
-- http://127.0.0.1:5000
+- Python
+- Pandas
+- Streamlit
+- Plotly
+- HTML/CSS
 
-## 3) Utilisation rapide
+## Objectif
 
-1. Importer un CSV (ou charger un fichier scrape).
-2. Verifier les colonnes et suggestions de renommage.
-3. Nettoyer les donnees.
-4. Lancer l'analyse automatique.
-5. Generer le rapport.
-6. (Optionnel) Utiliser l'onglet Web Scraper pour extraire un tableau depuis une URL.
-
-## 4) Configuration API (optionnel)
-
-Si vous utilisez des fonctions IA qui necessitent une cle API:
-- dupliquez `secrets.example.toml` en `secrets.toml`
-- renseignez votre cle
-
-Ne poussez jamais `secrets.toml` sur GitHub.
-
-## 5) Fichiers importants
-
-- `web_app.py`: API Flask + orchestration pipeline
-- `web_scraper.py`: extraction de tableaux web
-- `core_analysis.py`: coeur d'analyse
-- `graphiques.py`: generation des graphiques
-- `rapport_generator.py`: generation de rapport
-- `index.html`: interface web
-
-## 6) Notes
-
-- Les dossiers `output_*` et `scraped_data/` sont generes a l'execution.
-- Le fichier `secrets.toml` est ignore par git.
-
+Développer un outil simple permettant d’automatiser certaines tâches d’analyse de données et de reporting.
