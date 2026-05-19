@@ -372,4 +372,4 @@ Chaque analyse crée un dossier output_YYYYMMDD_HHMMSS/ contenant:
 
 Questions? Consultez les guides dans le dossier ou ouvrez une issue sur GitHub.
 
-Bon courage avec StudianalyseCSV 
+Bon courage avec Studianalyse CSV!

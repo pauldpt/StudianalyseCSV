@@ -1,9 +1,9 @@
-# 🧹 Agent IA Universel v2.0
+﻿#  StudianalyseCSV v2.0
 **Analyse et nettoyage CSV avec intelligence artificielle - Interface web + Rapports professionnels**
 
 ---
 
-## 📋 Table des matieres
+##  Table des matieres
 1. [Installation](#installation)
 2. [Architecture](#architecture)
 3. [Usage](#usage)
@@ -13,7 +13,7 @@
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequis
 - Python 3.10+
@@ -49,23 +49,23 @@ echo 'GROQ_API_KEY = "votre_cle_api_ici"' > .streamlit/secrets.toml
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Modules Python
 
 ```
 projet/
-├── core_analysis.py          # Logique metier (CSV, IA, nettoyage)
-├── graphiques.py             # Generation de graphiques Plotly
-├── rapport_generator.py      # Rapports HTML/PDF professionnels
-├── streamlit_app.py          # Interface web interactive
-├── agent_groq.py             # [ANCIEN] CLI originelle (conserve)
-├── corrections.json          # Dictionnaire personnalise
-├── requirements.txt          # Dependances Python
-├── README_STREAMLIT.md       # Ce guide
-└── .streamlit/
-    ├── config.toml           # Config Streamlit
-    └── secrets.toml          # Secrets (API key)
+ core_analysis.py          # Logique metier (CSV, IA, nettoyage)
+ graphiques.py             # Generation de graphiques Plotly
+ rapport_generator.py      # Rapports HTML/PDF professionnels
+ streamlit_app.py          # Interface web interactive
+ agent_groq.py             # [ANCIEN] CLI originelle (conserve)
+ corrections.json          # Dictionnaire personnalise
+ requirements.txt          # Dependances Python
+ README_STREAMLIT.md       # Ce guide
+ .streamlit/
+     config.toml           # Config Streamlit
+     secrets.toml          # Secrets (API key)
 ```
 
 ### Flux de donnees
@@ -98,7 +98,7 @@ CSV -> Charger -> Analyser (IA) -> Propositions -> Valider -> Nettoyer -> Graphi
 
 ---
 
-## 💻 Usage
+##  Usage
 
 ### Option 1: Interface Web Streamlit (RECOMMANDEE)
 
@@ -118,11 +118,11 @@ Puis ouvrir http://localhost:8501
 7. Telecharger fichiers
 
 **Avantages:**
-- ✅ Interface intuitive (no CLI)
-- ✅ Preview avant/apres en temps reel
-- ✅ Editeur de mapping interactif
-- ✅ Rapports generes localement
-- ✅ Telecharge fichiers directement
+-  Interface intuitive (no CLI)
+-  Preview avant/apres en temps reel
+-  Editeur de mapping interactif
+-  Rapports generes localement
+-  Telecharge fichiers directement
 
 ### Option 2: CLI Classique
 
@@ -139,7 +139,7 @@ python agent_groq.py --input data.csv --fix-all
 
 ---
 
-## ✨ Fonctionnalites principales
+##  Fonctionnalites principales
 
 ### 1. Analyse IA (1 appel = N colonnes)
 
@@ -158,7 +158,7 @@ python agent_groq.py --input data.csv --fix-all
     "confidence": 0.95,
     "anomalies": []
   },
-  "Montant €": {
+  "Montant ": {
     "proposed_name": "montant",
     "data_type": "number",
     "confidence": 0.88,
@@ -171,27 +171,27 @@ python agent_groq.py --input data.csv --fix-all
 
 Generes automatiquement pour chaque CSV:
 
-📊 **Distribution numeriques**
+ **Distribution numeriques**
 - Histogramme + KDE
 - Lignes pour moyenne/mediane
 - Interactive (zoom, hover, export PNG)
 
-📦 **Boxplots**
+ **Boxplots**
 - Detecte outliers (methode IQR)
 - Surligne aberrantes en rouge
 - Affiche statistiques descriptives
 
-📈 **Categories**
+ **Categories**
 - Bar charts et pie charts
 - Pourcentages au hover
 - Top N valeurs
 
-🔗 **Correlations**
+ **Correlations**
 - Heatmap interactive
 - Valeurs numeriques
 - Color scale -1 a +1
 
-📉 **Timeseries**
+ **Timeseries**
 - Si colonne date existe
 - Regression lineaire
 - Trends temporelles
@@ -206,13 +206,13 @@ Generes automatiquement pour chaque CSV:
 ### 3. Rapport HTML professionnel
 
 **Structure:**
-- 📄 Page de garde (design gradient violet/rose)
-- 📊 Resume technique (nb lignes, colonnes, anomalies)
-- 🗂️ Mapping applique (table avec confiance)
-- ❓ Questions strategiques (generees par IA)
-- ⚠️ Journal anomalies (problemes detectes)
-- 📈 Galerie graphiques (preview + liens)
-- 💡 Recommandations
+-  Page de garde (design gradient violet/rose)
+-  Resume technique (nb lignes, colonnes, anomalies)
+-  Mapping applique (table avec confiance)
+-  Questions strategiques (generees par IA)
+-  Journal anomalies (problemes detectes)
+-  Galerie graphiques (preview + liens)
+-  Recommandations
 
 **Design:**
 - Material Design (modern, pro, 2024)
@@ -231,7 +231,7 @@ Generes automatiquement pour chaque CSV:
 
 **Nombres:**
 - Parse formats francais (1 234,56) et anglo-saxons (1,234.56)
-- Supprime symboles (€, $, %)
+- Supprime symboles (, $, %)
 - Convertit en float avec precision
 
 **Dates:**
@@ -254,7 +254,7 @@ Generes automatiquement pour chaque CSV:
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Fichier `.streamlit/secrets.toml`
 
@@ -281,15 +281,15 @@ GRAPH_STYLE = "plotly"
 ```json
 {
   "statut": {
-    "termine": "Terminé",
-    "fin": "Terminé",
-    "complete": "Terminé",
-    "abandonne": "Abandonné",
-    "annule": "Abandonné"
+    "termine": "Termin",
+    "fin": "Termin",
+    "complete": "Termin",
+    "abandonne": "Abandonn",
+    "annule": "Abandonn"
   },
   "financeur": {
     "cpf": "CPF",
-    "region": "Région",
+    "region": "Rgion",
     "france travail": "France Travail",
     "opco": "OPCO"
   }
@@ -303,7 +303,7 @@ GRAPH_STYLE = "plotly"
 
 ---
 
-## 📊 Examples de sortie
+##  Examples de sortie
 
 ### Fichiers generes
 
@@ -311,26 +311,26 @@ Apres execution, dossier `output_YYYYMMDD_HHMMSS/`:
 
 ```
 output_20260413_114542/
-├── donnees_nettoyees.csv           # CSV nettoye
-├── renaming_map.json               # Mapping colonnes
-├── proposals.json                  # Propositions IA
-├── anomalies_log.json              # Transformations effectuees
-├── rapport.html                    # Rapport interactif (20-30 pages)
-├── rapport.pdf                     # Rapport imprimable
-├── graph_01_distribution_*.html    # Graphiques Plotly interactifs
-├── graph_02_boxplot_*.html         # Outliers detection
-├── graph_03_categories_*.html      # Distribution categories
-├── graph_04_correlations.html      # Heatmap correlations
-├── graph_05_timeseries_*.html      # Tendances temporelles
-├── graph_06_scatter_*.html         # Scatter plots
-├── graph_07_pie_*.html             # Pie charts composition
-├── graph_08_statistics_summary.html # Dashboard stats
-└── RESUME.txt                      # Execution summary
+ donnees_nettoyees.csv           # CSV nettoye
+ renaming_map.json               # Mapping colonnes
+ proposals.json                  # Propositions IA
+ anomalies_log.json              # Transformations effectuees
+ rapport.html                    # Rapport interactif (20-30 pages)
+ rapport.pdf                     # Rapport imprimable
+ graph_01_distribution_*.html    # Graphiques Plotly interactifs
+ graph_02_boxplot_*.html         # Outliers detection
+ graph_03_categories_*.html      # Distribution categories
+ graph_04_correlations.html      # Heatmap correlations
+ graph_05_timeseries_*.html      # Tendances temporelles
+ graph_06_scatter_*.html         # Scatter plots
+ graph_07_pie_*.html             # Pie charts composition
+ graph_08_statistics_summary.html # Dashboard stats
+ RESUME.txt                      # Execution summary
 ```
 
 ---
 
-## 🔍 Modes d'execution
+##  Modes d'execution
 
 | Mode | Seuil Confiance | Usage |
 |------|-----------------|-------|
@@ -345,7 +345,7 @@ output_20260413_114542/
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Q: "GROQ_API_KEY not found"
 **R:** Definir variable environnement:
@@ -378,7 +378,7 @@ pip install --upgrade plotly
 
 ---
 
-## 📝 API Documentation
+##  API Documentation
 
 ### CSVAnalyzer
 
@@ -445,7 +445,7 @@ files = rapport_gen.generate_complete_report(
 
 ---
 
-## 🎨 Customization
+##  Customization
 
 ### Changer palette de couleurs (graphiques.py)
 
@@ -501,7 +501,7 @@ except Exception as e:
 
 ---
 
-## 📚 Ressources
+##  Ressources
 
 - **Groq API:** https://console.groq.com
 - **Streamlit Docs:** https://docs.streamlit.io
@@ -511,17 +511,18 @@ except Exception as e:
 
 ---
 
-## 📄 Licence & Credit
+##  Licence & Credit
 
-**Agent IA Universel v2.0**
+**StudianalyseCSV v2.0**
 - Analyse CSV avec IA (Groq LLM)
 - Interface web (Streamlit)
 - Graphiques pro (Plotly)
 - Rapports HTML/PDF (Jinja2 + WeasyPrint)
 - Design Material v3
 
-Developpe avec ❤️ pour transformer donnees messy en insights professionnels.
+Developpe avec  pour transformer donnees messy en insights professionnels.
 
 ---
 
-**Version:** 2.0 | **Date:** 2026-04-13 | **Python:** 3.10+ | **Status:** Production-Ready ✅
+**Version:** 2.0 | **Date:** 2026-04-13 | **Python:** 3.10+ | **Status:** Production-Ready 
+

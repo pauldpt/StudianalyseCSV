@@ -1,47 +1,47 @@
-# 🎯 SYSTÈME ADAPTATIF CSV - DOCUMENTATION COMPLÈTE
+﻿#  SYSTME ADAPTATIF CSV - DOCUMENTATION COMPLTE
 
 ## Vue d'Ensemble
-Système intelligent qui **détecte automatiquement le domaine** d'un dataset CSV et génère des **questions d'analyse pertinentes** et des **graphiques contextualisés** sans configuration manuelle.
+Systme intelligent qui **dtecte automatiquement le domaine** d'un dataset CSV et gnre des **questions d'analyse pertinentes** et des **graphiques contextualiss** sans configuration manuelle.
 
-## ✨ Ce Qui Fonctionne Maintenant
+##  Ce Qui Fonctionne Maintenant
 
-### 1. Auto-Détection de Domaine
-Le système analyse les noms de colonnes et détecte automatiquement le secteur:
+### 1. Auto-Dtection de Domaine
+Le systme analyse les noms de colonnes et dtecte automatiquement le secteur:
 - **Accidents routiers**: Colonnes contenant "lum", "col", "atm", "agg", "accident", etc.
 - **Formation**: Colonnes contenant "taux", "completion", "inactivite", "module", "score"
 - **Ventes**: Colonnes contenant "revenue", "sales", "segment", "product", "order"
 - **RH**: Colonnes contenant "departement", "employee", "turnover", "salaire"
-- **Santé**: Colonnes contenant les mots-clés médicaux
-- **Logistique**: Colonnes contenant les mots-clés de supply chain
+- **Sant**: Colonnes contenant les mots-cls mdicaux
+- **Logistique**: Colonnes contenant les mots-cls de supply chain
 
-### 2. Questions Contextualisées
-Pour chaque domaine, le système génère des questions **pertinentes au métier**:
-- **Accidents**: Facteurs de risque, interactions (luminosité × urbain), zones critiques
-- **Formation**: Apprenants inactifs, taux de complétion, modules performants
-- **Ventes**: Segments lucratifs, performance produits, tendances saisonnières
-- **RH**: Turnover par département, rétention des talents, engagement par équipe
-- **Santé**: Conditions fréquentes, profils à risque, protocoles efficaces
-- **Logistique**: Routes critiques, prédictions de retard, performance régionale
+### 2. Questions Contextualises
+Pour chaque domaine, le systme gnre des questions **pertinentes au mtier**:
+- **Accidents**: Facteurs de risque, interactions (luminosit  urbain), zones critiques
+- **Formation**: Apprenants inactifs, taux de compltion, modules performants
+- **Ventes**: Segments lucratifs, performance produits, tendances saisonnires
+- **RH**: Turnover par dpartement, rtention des talents, engagement par quipe
+- **Sant**: Conditions frquentes, profils  risque, protocoles efficaces
+- **Logistique**: Routes critiques, prdictions de retard, performance rgionale
 
 ### 3. Visualisations Intelligentes
-- **Scatter plots**: Avec trendlines linéaires + coefficient de corrélation
-- **Bar charts**: Avec gradient de couleur (bleu clair = bas, bleu foncé = haut)
+- **Scatter plots**: Avec trendlines linaires + coefficient de corrlation
+- **Bar charts**: Avec gradient de couleur (bleu clair = bas, bleu fonc = haut)
 - **Line charts**: Avec bandes de confiance min-max
-- **Distribution plots**: Pour identifier les patterns de variabilité
+- **Distribution plots**: Pour identifier les patterns de variabilit
 
 ### 4. Rapports HTML Complets
-- Résumé des colonnes du dataset
-- Questions métier avec explications contextuelles
-- Graphiques interactifs Plotly embarqués
-- Minimal de données brutes, maximum de visualisations
+- Rsum des colonnes du dataset
+- Questions mtier avec explications contextuelles
+- Graphiques interactifs Plotly embarqus
+- Minimal de donnes brutes, maximum de visualisations
 
-## 🚀 Comment Utiliser
+##  Comment Utiliser
 
-### Option 1: Auto-Détection (Recommandé)
+### Option 1: Auto-Dtection (Recommand)
 ```bash
 python core_analysis.py votrefichier.csv
 ```
-→ Détecte automatiquement le domaine et génère des questions appropriées
+ Dtecte automatiquement le domaine et gnre des questions appropries
 
 ### Option 2: Override Manuel
 ```bash
@@ -49,75 +49,75 @@ python core_analysis.py votrefichier.csv formation
 python core_analysis.py votrefichier.csv ventes
 python core_analysis.py votrefichier.csv accidents
 ```
-→ Force un domaine spécifique (utile pour tester)
+ Force un domaine spcifique (utile pour tester)
 
 ### Option 3: Streamlit UI (Futur)
 ```bash
 streamlit run streamlit_app.py
 ```
-→ Interface Web avec sélecteur de thème optionnel
+ Interface Web avec slecteur de thme optionnel
 
-## 📊 Flux de Traitement
+##  Flux de Traitement
 
 ```
 CSV Upload
-    ↓
-[Auto-Détection de Domaine]
-    ├→ Analyze column names
-    ├→ Detect keywords (accidents, formation, ventes, etc.)
-    └→ Assign domain + contexte métier
-    ↓
-[Nettoyage des Données]
-    ├→ Rename columns intelligently (lum → luminosite, etc.)
-    ├→ Detect ID/Date columns
-    └→ Filter outliers
-    ↓
-[Génération de Questions]
-    ├→ Get domain-specific question generator
-    ├→ Classify columns (numeric, categorical, text)
-    └→ Generate 2-5 questions adaptées aux données
-    ↓
-[Génération de Graphiques]
-    ├→ Create visualizations for each question
-    ├→ Add trendlines / gradients / confidence bands
-    └→ Generate bonus graphs (correlations, etc.)
-    ↓
+    
+[Auto-Dtection de Domaine]
+     Analyze column names
+     Detect keywords (accidents, formation, ventes, etc.)
+     Assign domain + contexte mtier
+    
+[Nettoyage des Donnes]
+     Rename columns intelligently (lum  luminosite, etc.)
+     Detect ID/Date columns
+     Filter outliers
+    
+[Gnration de Questions]
+     Get domain-specific question generator
+     Classify columns (numeric, categorical, text)
+     Generate 2-5 questions adaptes aux donnes
+    
+[Gnration de Graphiques]
+     Create visualizations for each question
+     Add trendlines / gradients / confidence bands
+     Generate bonus graphs (correlations, etc.)
+    
 [Rapport HTML]
-    └→ Embed all graphs in professional HTML report
+     Embed all graphs in professional HTML report
 ```
 
-## 🎯 Résultats Validés
+##  Rsultats Valids
 
 ### Test 1: Accidents (56,518 lignes)
 ```
 Domain: accidents | Theme: Accidents routiers
-Questions générées:
+Questions gnres:
   Q1: Quels facteurs produisent le plus d'accidents?
-  Q2: Comment la luminosité influence-t-elle les accidents nocturnes?
-  Q3: Quelles zones géographiques sont critiques?
+  Q2: Comment la luminosit influence-t-elle les accidents nocturnes?
+  Q3: Quelles zones gographiques sont critiques?
 ```
 
 ### Test 2: Formation (12 lignes - test dataset)
 ```
 Domain: formation | Theme: Formation & Apprentissage
-Questions générées:
+Questions gnres:
   Q1: Quels modules ont les meilleurs scores?
 ```
 
 ### Test 3: Ventes (10,194 lignes)
 ```
 Domain: ventes | Theme: Ventes & Revenue
-Questions générées:
-  Q1: Quels segments client génèrent le plus de revenue?
-  Q2: Quels produits/catégories ont la meilleure performance?
+Questions gnres:
+  Q1: Quels segments client gnrent le plus de revenue?
+  Q2: Quels produits/catgories ont la meilleure performance?
 ```
 
-## 🔧 Architecture Technique
+##  Architecture Technique
 
-### Fichiers Clés
-- **core_analysis.py**: Moteur d'analyse + auto-détection (800+ lignes)
-- **graphiques.py**: Générateur de visualisations (500+ lignes)
-- **rapport_generator.py**: Génération rapports HTML (400+ lignes)
+### Fichiers Cls
+- **core_analysis.py**: Moteur d'analyse + auto-dtection (800+ lignes)
+- **graphiques.py**: Gnrateur de visualisations (500+ lignes)
+- **rapport_generator.py**: Gnration rapports HTML (400+ lignes)
 - **streamlit_app.py**: Interface Web (optionnel)
 
 ### Classe Principale: `CSVAnalyzer`
@@ -130,12 +130,12 @@ class CSVAnalyzer:
                                           # AUTO-DETECT + generate Q
 ```
 
-### Auto-Détection (Ligne 650-668 de core_analysis.py)
+### Auto-Dtection (Ligne 650-668 de core_analysis.py)
 ```python
 # Analyser les colonnes
 all_cols_lower = ' '.join([c.lower() for c in df.columns])
 
-# Détecter le domaine
+# Dtecter le domaine
 if any(x in all_cols_lower for x in ['lum','col','atm','agg','accident']):
     domain = "accidents"
 elif any(x in all_cols_lower for x in ['taux','completion','inactivite']):
@@ -143,41 +143,42 @@ elif any(x in all_cols_lower for x in ['taux','completion','inactivite']):
 # ... etc pour autres domaines
 ```
 
-## 📝 Dictionnaire CONTEXTE_THEMES
-Chaque domaine a ses propres messages "utilité" métier pour expliquer POURQUOI on pose chaque question:
+##  Dictionnaire CONTEXTE_THEMES
+Chaque domaine a ses propres messages "utilit" mtier pour expliquer POURQUOI on pose chaque question:
 
 ```python
 CONTEXTE_THEMES = {
     "accidents": {
         "name": "Accidents routiers",
         "q1_utilite": "Identifier les facteurs de risque majeurs...",
-        "q2_utilite": "Détecter les interactions entre facteurs...",
+        "q2_utilite": "Dtecter les interactions entre facteurs...",
         # etc
     },
     "formation": {
         "name": "Formation & Apprentissage",
-        "q1_utilite": "Cibler les relances pour éviter les abandons...",
+        "q1_utilite": "Cibler les relances pour viter les abandons...",
         # etc
     },
     # ... 6 domaines total
 }
 ```
 
-## ✅ Points Clés Opérationnels
+##  Points Cls Oprationnels
 
-1. **Jamais besoin de configuration** - Auto-détection complète
-2. **Questions cohérentes avec métier** - Utilité explicite pour chaque Q
-3. **Graphiques adaptés** - Trendlines, gradients, confiance bands
+1. **Jamais besoin de configuration** - Auto-dtection complte
+2. **Questions cohrentes avec mtier** - Utilit explicite pour chaque Q
+3. **Graphiques adapts** - Trendlines, gradients, confiance bands
 4. **Rapports minimalistes** - 90% graphiques, 10% texte
 5. **Multi-CSV compatible** - Fonctionne avec n'importe quel dataset
 
-## 🎓 Prochaines Étapes Possibles
+##  Prochaines tapes Possibles
 
-- [ ] Intégrer Streamlit UI complètement
-- [ ] Tester avec datasets RH/Santé/Logistique réels
+- [ ] Intgrer Streamlit UI compltement
+- [ ] Tester avec datasets RH/Sant/Logistique rels
 - [ ] Ajouter IA Groq pour raffiner questions
-- [ ] Déployer en production
+- [ ] Dployer en production
 
 ---
 
-**Status**: ✅ **PRODUCTION READY** - Tous tests passent, système complètement opérationnel.
+**Status**:  **PRODUCTION READY** - Tous tests passent, systme compltement oprationnel.
+

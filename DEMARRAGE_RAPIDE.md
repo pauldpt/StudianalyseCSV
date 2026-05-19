@@ -1,8 +1,8 @@
-# 🚀 Demarrage Rapide - Agent IA Universel v2.0
+﻿#  Demarrage Rapide - StudianalyseCSV v2.0
 
-## ⚡ 5 minutes pour commencer
+##  5 minutes pour commencer
 
-### 1️⃣ Installation (2 min)
+### 1 Installation (2 min)
 
 ```bash
 # Installer dependances
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 python test_installation.py
 ```
 
-### 2️⃣ Configurer API Groq (2 min)
+### 2 Configurer API Groq (2 min)
 
 **Option A: Variable d'environnement** (recommande)
 
@@ -29,7 +29,7 @@ GROQ_API_KEY = "gsk_..."
 
 **Option C: Input dans l'app** (pendant execution)
 
-### 3️⃣ Lancer l'interface web (1 min)
+### 3 Lancer l'interface web (1 min)
 
 **Windows - Clic**:
 ```
@@ -50,27 +50,27 @@ Puis ouvrir: http://localhost:8501
 
 ---
 
-## 📋 Workflow Streamlit
+##  Workflow Streamlit
 
 ```
 1. Upload CSV
-   ↓
+   
 2. Preview donnees
-   ↓
+   
 3. Lancer analyse IA
-   ↓
+   
 4. Verifier propositions
-   ↓
+   
 5. Nettoyer donnees
-   ↓
+   
 6. Generer rapports
-   ↓
-7. Telecharger fichiers ✅
+   
+7. Telecharger fichiers 
 ```
 
 ---
 
-## 🎯 Cas d'usage rapidement
+##  Cas d'usage rapidement
 
 ### Cas 1: Nettoyer un CSV
 
@@ -105,32 +105,32 @@ python agent_groq.py --input data.csv --fix-all
 
 ---
 
-## 📊 Fichiers generes
+##  Fichiers generes
 
 Apres execution, dossier `output_YYYYMMDD_HHMMSS/`:
 
 ```
-├── donnees_nettoyees.csv          ← CSV nettoye ✅
-├── rapport.html                   ← Rapport web interactif
-├── rapport.pdf                    ← Rapport imprimable
-├── renaming_map.json              ← Mapping colonnes
-├── proposals.json                 ← Propositions IA
-├── anomalies_log.json             ← Transformations
-├── graph_01_distribution_*.html   ← Histogrammes (Plotly)
-├── graph_02_boxplot_*.html        ← Boxplots + outliers
-├── graph_03_categories_*.html     ← Bar charts
-├── graph_04_correlations.html     ← Heatmap correlations
-├── graph_05_timeseries_*.html     ← Tendances temporelles
-├── graph_06_scatter_*.html        ← Scatter plots
-├── graph_07_pie_*.html            ← Pie charts
-└── graph_08_statistics_summary.html ← Dashboard stats
+ donnees_nettoyees.csv           CSV nettoye 
+ rapport.html                    Rapport web interactif
+ rapport.pdf                     Rapport imprimable
+ renaming_map.json               Mapping colonnes
+ proposals.json                  Propositions IA
+ anomalies_log.json              Transformations
+ graph_01_distribution_*.html    Histogrammes (Plotly)
+ graph_02_boxplot_*.html         Boxplots + outliers
+ graph_03_categories_*.html      Bar charts
+ graph_04_correlations.html      Heatmap correlations
+ graph_05_timeseries_*.html      Tendances temporelles
+ graph_06_scatter_*.html         Scatter plots
+ graph_07_pie_*.html             Pie charts
+ graph_08_statistics_summary.html  Dashboard stats
 ```
 
 **Total:** 6+ fichiers essentiels + 8+ graphiques interactifs
 
 ---
 
-## 🔧 Lancement rapide
+##  Lancement rapide
 
 ### Windows (Plus facile)
 
@@ -152,7 +152,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🛑 Erreurs courantes & Solutions
+##  Erreurs courantes & Solutions
 
 | Erreur | Solution |
 |--------|----------|
@@ -164,7 +164,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 💡 Tips & Tricks
+##  Tips & Tricks
 
 1. **Creer `.streamlit/secrets.toml`** pour ne pas saisir API key a chaque fois
 2. **Utiliser --fix-all** une fois propositions validees (plus rapide)
@@ -174,7 +174,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📚 Aller plus loin
+##  Aller plus loin
 
 | Document | Contenu |
 |----------|---------|
@@ -185,7 +185,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🎓 Ressources
+##  Ressources
 
 - **Groq API:** https://console.groq.com/docs
 - **Streamlit:** https://docs.streamlit.io/library/get-started
@@ -194,7 +194,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## ✅ Check-list debut
+##  Check-list debut
 
 - [ ] Python 3.10+ installe
 - [ ] `pip install -r requirements.txt` execute
@@ -204,7 +204,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🚀 Lancer MAINTENANT
+##  Lancer MAINTENANT
 
 ```bash
 streamlit run streamlit_app.py
@@ -214,6 +214,7 @@ streamlit run streamlit_app.py
 
 ---
 
-**Bienvenue dans Agent IA Universel v2.0!**
+**Bienvenue dans StudianalyseCSV v2.0!**
 
-*Bonne analyse de donnees! 📊✨*
+*Bonne analyse de donnees! *
+

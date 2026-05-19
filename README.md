@@ -1,4 +1,4 @@
-# Analyse CSV + Web Scraper (Flask)
+﻿# StudianalyseCSV - Analyse et Web Scraper
 
 Application web en francais pour:
 - charger et verifier des CSV,
@@ -59,3 +59,4 @@ Ne poussez jamais `secrets.toml` sur GitHub.
 
 - Les dossiers `output_*` et `scraped_data/` sont generes a l'execution.
 - Le fichier `secrets.toml` est ignore par git.
+
